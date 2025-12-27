@@ -1,3 +1,32 @@
+## Architecture Overview
+        ┌──────────────┐
+        │  Windows PC  │
+        │  (Git Bash)  │
+        └──────┬───────┘
+               │ SSH
+               │
+        ┌──────▼───────┐
+        │ Ubuntu Server│
+        │ mcserverface │
+        │ (Home Lab)   │
+        └──────┬───────┘
+               │
+      ┌────────▼────────┐
+      │  Services / OS  │
+      │  SSH, Files,    │
+      │  Monitoring     │
+      └─────────────────┘
+
+   Remote Access (Optional):
+   ───────────────────────
+        Phone / Laptop
+            │
+        Tailscale
+            │
+        mcserverface
+
+
+
 # server-mcserverface
 
 Personal Ubuntu Server (Home Lab)
@@ -20,3 +49,5 @@ Personal Ubuntu Server (Home Lab)
 - authorized_keys managed per-device
 
 Built by learning, breaking, and fixing.
+
+
