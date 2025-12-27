@@ -1,4 +1,5 @@
 ## Architecture Overview
+'''
         ┌──────────────┐
         │  Windows PC  │
         │  (Git Bash)  │
@@ -17,7 +18,9 @@
       │  Monitoring     │
       └─────────────────┘
 
-
+'''
+## Remote Administration
+''
 
 Remote Access (Optional):
 ───────────────────────
@@ -26,14 +29,14 @@ Phone / Laptop
 Tailscale
     │
 mcserverface
-
+'''
 
 ## Design Decisions
 
 This homelab was intentionally designed to mirror real-world system administration practices while remaining simple and maintainable. SSH key-based authentication was chosen over password-based access to reduce brute-force risk and align with industry security standards. Tailscale was used for remote access instead of exposing ports on the home router, minimizing attack surface while enabling secure access from multiple devices. Documentation and version control were prioritized so configuration choices and system intent are clearly communicated, not just implemented.
 
 ## Network Flow
-
+'''
 [Remote Device]
    (Laptop / Phone)
         │
@@ -46,9 +49,7 @@ This homelab was intentionally designed to mirror real-world system administrati
 [mcserverface]
  Ubuntu Server
  (SSH / Services)
-yaml
-
-
+'''
 # server-mcserverface
 
 Personal Ubuntu Server (Home Lab)
