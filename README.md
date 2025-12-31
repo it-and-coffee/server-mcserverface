@@ -8,8 +8,8 @@ Personal Ubuntu Server (Home Lab)
 - Client alias: mcface
 
 ## Devices
-- Windows laptop (tanya@MSI)
-- Android phone (tanya-phone)
+- Windows laptop
+- Android phone
 - Tablet
 
 ## Network
