@@ -1,4 +1,4 @@
-# server-mcserverface
+# server-mcserverface Project
 
 Personal Ubuntu Server (Home Lab)
 
