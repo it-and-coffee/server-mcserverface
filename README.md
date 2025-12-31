@@ -10,9 +10,10 @@ Personal Ubuntu Server (Home Lab)
 ## Devices
 - Windows laptop (tanya@MSI)
 - Android phone (tanya-phone)
+- Tablet
 
 ## Network
-- Local IP: 192.168.1.75
+- Local IP: 192.xxx.x.xx
 - SSH: port 22
 
 ## Notes
