@@ -77,37 +77,29 @@ This homelab was intentionally designed to mirror real-world system administrati
 ```
 
 
-## 🔐 SSH Hardening (Key-Only Access)
-### Overview
-Hardened SSH access on an Ubuntu server by disabling password-based authentication and enforcing key-only login to reduce exposure to brute-force attacks and credential compromise.
+## Security Architecture & Operations
+Security documentation lives in [`/security`](security/).
 
-```$ sudo sshd -T -f /etc/ssh/sshd_config | grep passwordauthentication
-passwordauthentication no
+### Controls Implemented
+- **SSH hardening (key-only access):** disabled password auth and restricted access  
+  → See: [`security/ssh-hardening-key-only.md`](security/ssh-hardening-key-only.md)
 
-$ ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no user@server
-Permission denied (publickey).
-```
+### Audits & Remediation
+- **User & privilege audit checklist**  
+  → See: [`security/user-access-audit.md`](security/user-access-audit.md)
 
-### Actions Taken
-- Generated a dedicated ED25519 SSH key pair for the server
-- Configured SSH to disable password authentication
-- Disabled root login over SSH
-- Implemented a final override configuration using `/etc/ssh/sshd_config.d/100-final.conf`
-- Verified effective SSH configuration using `sshd -T`
-- Confirmed password authentication was denied via forced login tests
+- **Incident report: unused login-capable user**  
+  → See: [`security/incident-unused-login-user.md`](security/incident-unused-login-user.md)
 
-### Security Impact
-This configuration eliminates password-based SSH access, significantly reducing the risk of brute-force attacks. Enforcing cryptographic key authentication ensures that only trusted devices can access the server while preserving secure administrative control.
+## Services
+- (Add short bullets here when you install things: Jellyfin, Netdata, etc.)
 
-
-### Lessons Learned
-- Ubuntu SSH configuration is layered and may include multiple override files
-- Cloud-init and included configs can silently re-enable defaults
-- `sshd -T` is the authoritative way to verify effective SSH configuration
-- Hardening must be validated through testing, not assumptions
-
-
-## Ongoing Security Practices
-- Routine user and privilege audits
-- Incident documentation and remediation (unused login-capable account)
+## Repo Structure
+```text
+.
+├── README.md
+└── security/
+    ├── README.md
+    ├── ssh-hardening-key-only.md
+    └── incident-unused-login-user.md
 
