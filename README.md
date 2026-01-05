@@ -107,6 +107,7 @@ This configuration eliminates password-based SSH access, significantly reducing 
 - Hardening must be validated through testing, not assumptions
 
 
-## Security
+## Ongoing Security Practices
 - Routine user and privilege audits
-- Documented remediation of an unused login-capable user account
+- Incident documentation and remediation (unused login-capable account)
+
