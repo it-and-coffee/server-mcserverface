@@ -92,7 +92,7 @@ Security documentation lives in [`/security`](security/).
   → See: [`security/incident-unused-login-user.md`](security/incident-unused-login-user.md)
 
 ## Services
-- (Add short bullets here when you install things: Jellyfin, Netdata, etc.)
+- To be added soon.
 
 ## Repo Structure
 ```text
